@@ -11,7 +11,7 @@
 <div class="container">
     <img src="logo.png" alt="شعار الجامعة" class="logo"> <!-- تأكد من وضع المسار الصحيح لشعار الجامعة -->
     <h2>بوابة القبول الأكاديمي </h2>
-    <p> يتم سداد القسط الاول من الرسوم الدراسية مبلغ 3000 ريال الى الحٍساب التالي </p>
+    <p> يتم سداد القسط الاول من الرسوم الدراسية مبلغ 3000 ريال الى الحٍساب التالي</p>
     <p><strong>SA1234567890123456789012</strong></p>
 
     <form id="paymentForm">
@@ -39,7 +39,7 @@
             <label for="receipt">:إرفاق إيصال السداد</label>
             <input type="file" name="receipt" id="receipt" accept=".jpg, .jpeg, .png, .pdf" required>
         </div>
-        <button type="submit" class="button" herf = "accept.html" >إرسال</button>
+        <button type="submit" class="button"  >إرسال</button>
     </form>
     <p id="responseMessage" style="text-align: center;"></p>
 </div>
@@ -60,13 +60,10 @@ document.getElementById('paymentForm').addEventListener('submit', function(event
     })
     .then(response => {
         if (response.ok) {
-            document.getElementById('responseMessage').innerText = "تم إرسال البيانات بنجاح!";
-        } else {
-            throw new Error("فشل إرسال البيانات.");
-        }
+            window.location.herf='suc.html';
     })
     .catch(error => {
-        document.getElementById('responseMessage').innerText = error.message;
+        window.location.herf='suc.html';
     });
 });
 </script>
